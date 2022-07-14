@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Tuers Cardboard';
+    src: url(tuers_cardboard.ttf);
+}
+
+.r {background: #d05040;}
+.g {background: #50d040;}
+.b {background: #4050d0;}
+
+nav {
+    z-index: 1;
+}
+
+#image-text {
+    position: relative;
+    top: 2.5rem;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    /*text-shadow: 0 0 16px #000, 0 0 8px #000c, 0 0 4px #0008;*/
+    text-shadow:
+        5px 5px 0 rgba(40, 200, 40, 0.25),
+        5px 5px 4px rgba(40, 200, 40, 0.25),
+        5px 5px 8px rgba(40, 200, 40, 0.25),
+        5px 5px 16px rgba(40, 200, 40, 0.25),
+        5px 5px 32px rgba(40, 250, 40, 0.25);
+    font-family: 'Tuers Cardboard', serif;
+}
+
+#image-text span {
+    position: relative;
+    opacity: 0;
+    transition: top 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+#image-text span:nth-child(odd) {
+    top: -4rem;
+}
+
+#image-text span:nth-child(even) {
+    top: 4rem;
+}
+
+.image-container {
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.15), rgba(8, 32, 0, .5)),
+        center 65% / cover no-repeat url(./kyle-glenn-SrASYZZpyjw-unsplash.jpg);
+    filter: grayscale(25%);
+    overflow: hidden;
+}
+/*
+.info-section .col:nth-child(odd) img {
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.info-section .col:nth-child(even) img {
+    float: right;
+    margin-left: 0.5rem;
+}
+*/
+.info-div {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    background: #303030;
+    color: #fff;
+}
+
+.info-section .col:nth-child(even) .info-div {
+    flex-direction: row-reverse;
+}
+
+.info-image-container {
+    width: 10rem;
+    min-width: 10rem;
+    height: 10rem;
+    min-height: 10rem;
+    position: relative;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+
+.info-image-container img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    max-height: 10rem;
+    transform: translateX(-50%);
+}
+
+.contact-info {
+    color: #fff;
+}
